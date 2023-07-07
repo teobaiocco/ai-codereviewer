@@ -16,8 +16,9 @@ review process.
 1. To use this GitHub Action, you need an OpenAI API key. If you don't have one, sign up for an API key
    at [OpenAI](https://beta.openai.com/signup).
 
-2. Add the OpenAI API key as a GitHub Secret in your repository with the name `OPENAI_API_KEY`. You can find more
-   information about GitHub Secrets [here](https://docs.github.com/en/actions/reference/encrypted-secrets).
+2. Add the OpenAI API key as a GitHub Secret in your repository with the name `OPENAI_API_KEY` and 
+   your OpenAI Organization ID as a GitHub Secret in your repository with the name `OPENAI_API_ORG`.
+   You can find more information about GitHub Secrets [here](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
 3. Create a `.github/workflows/main.yml` file in your repository and add the following content:
 

@@ -7,11 +7,13 @@ import minimatch from "minimatch";
 
 const GITHUB_TOKEN: string = core.getInput("GITHUB_TOKEN");
 const OPENAI_API_KEY: string = core.getInput("OPENAI_API_KEY");
+const OPENAI_API_ORG: string = core.getInput("OPENAI_API_ORG");
 
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
 const configuration = new Configuration({
   apiKey: OPENAI_API_KEY,
+  organization: OPENAI_API_ORG,
 });
 
 const openai = new OpenAIApi(configuration);
