@@ -13,7 +13,7 @@ const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
 const configuration = new Configuration({
   apiKey: OPENAI_API_KEY,
-//  organization: OPENAI_API_ORG,
+  organization: OPENAI_API_ORG,
 });
 
 const openai = new OpenAIApi(configuration);

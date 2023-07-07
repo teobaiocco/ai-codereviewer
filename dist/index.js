@@ -54,7 +54,7 @@ const OPENAI_API_ORG = core.getInput("OPENAI_API_ORG");
 const octokit = new rest_1.Octokit({ auth: GITHUB_TOKEN });
 const configuration = new openai_1.Configuration({
     apiKey: OPENAI_API_KEY,
-    //  organization: OPENAI_API_ORG,
+    organization: OPENAI_API_ORG,
 });
 const openai = new openai_1.OpenAIApi(configuration);
 function getPRDetails() {
