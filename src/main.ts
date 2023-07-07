@@ -134,7 +134,7 @@ async function getAIResponse(prompt: string): Promise<Array<{
   reviewComment: string;
 }> | null> {
   const queryConfig = {
-    model: "gpt-4",
+    model: "gpt-3.5-turbo", //gpt-4 is not available in my account
     temperature: 0.2,
     max_tokens: 700,
     top_p: 1,
