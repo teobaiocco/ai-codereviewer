@@ -50,9 +50,11 @@ const parse_diff_1 = __importDefault(__nccwpck_require__(4833));
 const minimatch_1 = __importDefault(__nccwpck_require__(2002));
 const GITHUB_TOKEN = core.getInput("GITHUB_TOKEN");
 const OPENAI_API_KEY = core.getInput("OPENAI_API_KEY");
+const OPENAI_API_ORG = core.getInput("OPENAI_API_ORG");
 const octokit = new rest_1.Octokit({ auth: GITHUB_TOKEN });
 const configuration = new openai_1.Configuration({
     apiKey: OPENAI_API_KEY,
+    organization: OPENAI_API_ORG,
 });
 const openai = new openai_1.OpenAIApi(configuration);
 function getPRDetails() {
@@ -151,7 +153,7 @@ function getAIResponse(prompt) {
     var _a, _b;
     return __awaiter(this, void 0, void 0, function* () {
         const queryConfig = {
-            model: "gpt-4",
+            model: "gpt-3.5-turbo",
             temperature: 0.2,
             max_tokens: 700,
             top_p: 1,
